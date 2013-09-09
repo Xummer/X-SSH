@@ -9,8 +9,8 @@
 #import "ViewController.h"
 #import "Common.h"
 
-@interface ViewController ()
-
+@interface ViewController () <UIDocumentInteractionControllerDelegate>
+@property (nonatomic, strong) UIDocumentInteractionController *docIntController;
 @end
 
 @implementation ViewController
@@ -41,10 +41,30 @@
     [Common setIdleTimeDisabled:sender.on];
 }
 
+- (IBAction)openfileInOtherApp:(id)sender {
+    NSURL *fileUrl =
+     [[NSBundle mainBundle] URLForResource:@"gintoki" withExtension:@"jpeg"];
+    
+    UIDocumentInteractionController *diCtrl =
+     [UIDocumentInteractionController interactionControllerWithURL:fileUrl];
+    
+    [diCtrl setDelegate:self];
+    [self setDocIntController:diCtrl];
+    [_docIntController presentOptionsMenuFromRect:self.view.bounds
+                                           inView:self.view
+                                         animated:YES];
+}
+
 - (void)refreshIp {
     NSString *ipStr =
     [NSString stringWithFormat:@"ip: %@", [Common getIPAddress]];
     [_iplabel setText:ipStr];
+}
+
+
+#pragma mark - UIDocumentInteractionControllerDelegate
+- (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller {
+    return self;
 }
 
 @end
