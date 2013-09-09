@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Common.h"
 
 @interface ViewController ()
 
@@ -18,12 +19,32 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    [self refreshIp];
+    
+    [_screenSleepSwitch setOn:[Common getIdleTimeDisabled]];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (IBAction)refreshButtonPressed:(id)sender {
+    [self refreshIp];
+}
+
+- (IBAction)sleepSwitchChange:(UISwitch *)sender {
+    [Common setIdleTimeDisabled:sender.on];
+}
+
+- (void)refreshIp {
+    NSString *ipStr =
+    [NSString stringWithFormat:@"ip: %@", [Common getIPAddress]];
+    [_iplabel setText:ipStr];
 }
 
 @end

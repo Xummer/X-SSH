@@ -18,6 +18,7 @@
 		C13D097F17DD76280039DCC3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C13D097E17DD76280039DCC3 /* Default-568h@2x.png */; };
 		C13D098217DD76280039DCC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C13D098117DD76280039DCC3 /* ViewController.m */; };
 		C13D098517DD76280039DCC3 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C13D098317DD76280039DCC3 /* ViewController.xib */; };
+		C13D098D17DD77670039DCC3 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = C13D098C17DD77670039DCC3 /* Common.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		C13D098017DD76280039DCC3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C13D098117DD76280039DCC3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C13D098417DD76280039DCC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		C13D098B17DD77670039DCC3 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		C13D098C17DD77670039DCC3 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				C13D098017DD76280039DCC3 /* ViewController.h */,
 				C13D098117DD76280039DCC3 /* ViewController.m */,
 				C13D098317DD76280039DCC3 /* ViewController.xib */,
+				C13D098B17DD77670039DCC3 /* Common.h */,
+				C13D098C17DD77670039DCC3 /* Common.m */,
 				C13D096F17DD76280039DCC3 /* Supporting Files */,
 			);
 			path = "X-SSH";
@@ -176,6 +181,7 @@
 				C13D097517DD76280039DCC3 /* main.m in Sources */,
 				C13D097917DD76280039DCC3 /* AppDelegate.m in Sources */,
 				C13D098217DD76280039DCC3 /* ViewController.m in Sources */,
+				C13D098D17DD77670039DCC3 /* Common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

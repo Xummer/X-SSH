@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *iplabel;
+@property (weak, nonatomic) IBOutlet UIButton *ipRefreshBtn;
+@property (weak, nonatomic) IBOutlet UISwitch *screenSleepSwitch;
 
 @end
