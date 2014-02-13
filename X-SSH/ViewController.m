@@ -9,8 +9,13 @@
 #import "ViewController.h"
 #import "Common.h"
 
-@interface ViewController () <UIDocumentInteractionControllerDelegate>
+@interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *iplabel;
+@property (weak, nonatomic) IBOutlet UIButton *ipRefreshBtn;
+@property (weak, nonatomic) IBOutlet UISwitch *screenSleepSwitch;
+
 @property (nonatomic, strong) UIDocumentInteractionController *docIntController;
+
 @end
 
 @implementation ViewController
@@ -19,7 +24,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
     
     [self refreshIp];
     
@@ -41,30 +45,10 @@
     [Common setIdleTimeDisabled:sender.on];
 }
 
-- (IBAction)openfileInOtherApp:(id)sender {
-    NSURL *fileUrl =
-     [[NSBundle mainBundle] URLForResource:@"gintoki" withExtension:@"jpeg"];
-    
-    UIDocumentInteractionController *diCtrl =
-     [UIDocumentInteractionController interactionControllerWithURL:fileUrl];
-    
-    [diCtrl setDelegate:self];
-    [self setDocIntController:diCtrl];
-    [_docIntController presentOptionsMenuFromRect:self.view.bounds
-                                           inView:self.view
-                                         animated:YES];
-}
-
 - (void)refreshIp {
     NSString *ipStr =
     [NSString stringWithFormat:@"ip: %@", [Common getIPAddress]];
     [_iplabel setText:ipStr];
-}
-
-
-#pragma mark - UIDocumentInteractionControllerDelegate
-- (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller {
-    return self;
 }
 
 @end

@@ -19,7 +19,7 @@
 		C13D098217DD76280039DCC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C13D098117DD76280039DCC3 /* ViewController.m */; };
 		C13D098517DD76280039DCC3 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C13D098317DD76280039DCC3 /* ViewController.xib */; };
 		C13D098D17DD77670039DCC3 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = C13D098C17DD77670039DCC3 /* Common.m */; };
-		C13D098F17DDD2680039DCC3 /* gintoki.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C13D098E17DDD2680039DCC3 /* gintoki.jpeg */; };
+		C185442618ACBAD000C0AF83 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C185442518ACBAD000C0AF83 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		C13D098417DD76280039DCC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		C13D098B17DD77670039DCC3 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		C13D098C17DD77670039DCC3 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
-		C13D098E17DDD2680039DCC3 /* gintoki.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gintoki.jpeg; sourceTree = "<group>"; };
+		C185442518ACBAD000C0AF83 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,7 @@
 				C13D098317DD76280039DCC3 /* ViewController.xib */,
 				C13D098B17DD77670039DCC3 /* Common.h */,
 				C13D098C17DD77670039DCC3 /* Common.m */,
+				C185442518ACBAD000C0AF83 /* Images.xcassets */,
 				C13D096F17DD76280039DCC3 /* Supporting Files */,
 			);
 			path = "X-SSH";
@@ -103,7 +104,6 @@
 		C13D096F17DD76280039DCC3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C13D098E17DDD2680039DCC3 /* gintoki.jpeg */,
 				C13D097017DD76280039DCC3 /* X-SSH-Info.plist */,
 				C13D097117DD76280039DCC3 /* InfoPlist.strings */,
 				C13D097417DD76280039DCC3 /* main.m */,
@@ -168,10 +168,10 @@
 			files = (
 				C13D097317DD76280039DCC3 /* InfoPlist.strings in Resources */,
 				C13D097B17DD76280039DCC3 /* Default.png in Resources */,
+				C185442618ACBAD000C0AF83 /* Images.xcassets in Resources */,
 				C13D097D17DD76280039DCC3 /* Default@2x.png in Resources */,
 				C13D097F17DD76280039DCC3 /* Default-568h@2x.png in Resources */,
 				C13D098517DD76280039DCC3 /* ViewController.xib in Resources */,
-				C13D098F17DDD2680039DCC3 /* gintoki.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +270,8 @@
 		C13D098917DD76280039DCC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "X-SSH/X-SSH-Prefix.pch";
 				INFOPLIST_FILE = "X-SSH/X-SSH-Info.plist";
@@ -281,6 +283,8 @@
 		C13D098A17DD76280039DCC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "X-SSH/X-SSH-Prefix.pch";
 				INFOPLIST_FILE = "X-SSH/X-SSH-Info.plist";
